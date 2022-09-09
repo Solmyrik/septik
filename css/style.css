@@ -529,8 +529,13 @@ body._lock {
 
 .main {
   position: relative;
-  max-height: 600px;
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .main {
+    max-height: 600px;
+  }
 }
 
 .main__bg {
@@ -541,6 +546,12 @@ body._lock {
   width: 100%;
   height: 100%;
   max-height: 600px;
+}
+
+@media (max-width: 992px) {
+  .main__bg {
+    max-height: auto;
+  }
 }
 
 .main__container {
