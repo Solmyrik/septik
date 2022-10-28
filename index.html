@@ -11,19 +11,20 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__container">
+        <div class="header__wrapper">
+          <div class="header__container">
           <a href="index.html" class="header__logo">
             <img src="img/logo.svg" alt="logo" />
           </a>
           <nav class="header__menu menu">
             <div class="menu__body">
               <ul class="menu__list">
-                <li class="menu__item"><a href="" class="menu__link">Каталог септиков</a></li>
-                <li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
+                <li class="menu__item"><a href="#catalog" class="menu__link">Каталог септиков</a></li>
+                <li class="menu__item"><a href="#additional" class="menu__link">Услуги</a></li>
                 <li class="menu__item"><a href="" class="menu__link">Септик в рассрочку</a></li>
                 <li class="menu__item"><a href="" class="menu__link">Доп. продукция</a></li>
-                <li class="menu__item"><a href="" class="menu__link">Отзывы</a></li>
-                <li class="menu__item"><a href="" class="menu__link">Примеры работ</a></li>
+                <li class="menu__item"><a href="#feedback" class="menu__link">Отзывы</a></li>
+                <li class="menu__item"><a href="#example" class="menu__link">Примеры работ</a></li>
               </ul>
             </div>
           </nav>
@@ -48,6 +49,8 @@
             <span></span>
           </div>
         </div>
+        </div>
+        
       </header>
       <main class="page">
         <section class="main">
@@ -71,7 +74,7 @@
               <p class="main__text">Оставьте свой номер телефона и наш инженер перезвонит вам!</p>
               <form class="main__form">
                 <input class="main__input _input" type="number" placeholder="+375(99) 999-99-99" />
-                <button class="main__btn _btn">Отправить</button>
+                <button class="main__btn _btn input__btn">Отправить</button>
               </form>
               <div class="main__condi">
                 Отправляя заявку, вы соглашаетесь с политикой конциденциальности
@@ -116,21 +119,21 @@
                   <div class="test__question">Сколько человек будет проживать в доме?</div>
                   <div class="test__answer">
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input checked  type="radio" name="where" value="1-3"/>
                       1-3
                     </label>
 
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input type="radio" name="where" class="input-whare" value="4-6" />
                       4-6
                     </label>
 
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input type="radio" name="where" class="input-whare" value="7-9" />
                       7-9
                     </label>
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input type="radio" name="where" class="input-whare" value="Более 10 человек" />
                       Более 10 человек
                     </label>
                   </div>
@@ -139,13 +142,34 @@
                   <div class="test__question">Как долго планируете жить в доме?</div>
                   <div class="test__answer">
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input checked type="radio" name="how" class="input-how"  value="Круглый год" />
                       Круглый год
                     </label>
 
                     <label class="test__label">
-                      <input type="radio" name="radio" />
-                      Круглый год
+                      <input type="radio" name="how" class="input-how"  value="Сезонно" />
+                      Сезонно
+                    </label>
+                  </div>
+                </div>
+                <div class="test__item">
+                  <div class="test__question">Где планируете установить септик?</div>
+                  <div class="test__answer">
+                    <label class="test__label">
+                      <input value="Коттедж" type="radio" name="install" class="input-install" checked/>
+                      Коттедж
+                    </label>
+                    <label class="test__label">
+                      <input value="Загородный дом" type="radio" name="install" class="input-install" />
+                      Загородный дом
+                    </label>
+                    <label class="test__label">
+                      <input value="Дача" type="radio" name="install" class="input-install" />
+                      Дача
+                    </label>
+                    <label class="test__label">
+                      <input value="Другое" type="radio" name="install" class="input-install" />
+                      Другое
                     </label>
                   </div>
                 </div>
@@ -153,20 +177,20 @@
                   <div class="test__question">Какой тип грунта на вашем участке?</div>
                   <div class="test__answer">
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input value="Песчаный" type="radio" name="ground" class="input-ground" checked/>
                       Песчаный
                     </label>
 
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input value="Торф" type="radio" name="ground" class="input-ground" />
                       Торф
                     </label>
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input value="Глина" type="radio" name="ground" class="input-ground" />
                       Глина
                     </label>
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input value="Не знаю, затрудняюсь ответить" type="radio" name="ground" class="input-ground" />
                       Не знаю, затрудняюсь ответить
                     </label>
                   </div>
@@ -175,39 +199,17 @@
                   <div class="test__question">Какой уровень грунтовых вод на вашем участке?</div>
                   <div class="test__answer">
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input value="Низкий уровень" type="radio" name="level" class="input-level" checked/>
                       Низкий уровень
                     </label>
 
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input value="Высокий уровень" type="radio" name="level" class="input-level" />
                       Высокий уровень
                     </label>
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input value="Не знаю, затруднюсь ответить" type="radio" name="level" class="input-level" />
                       Не знаю, затруднюсь ответить
-                    </label>
-                  </div>
-                </div>
-                <div class="test__item">
-                  <div class="test__question">Где планируете установить септик?</div>
-                  <div class="test__answer">
-                    <label class="test__label">
-                      <input type="radio" name="radio" />
-                      Коттедж
-                    </label>
-
-                    <label class="test__label">
-                      <input type="radio" name="radio" />
-                      Загородный дом
-                    </label>
-                    <label class="test__label">
-                      <input type="radio" name="radio" />
-                      Дача
-                    </label>
-                    <label class="test__label">
-                      <input type="radio" name="radio" />
-                      Другое
                     </label>
                   </div>
                 </div>
@@ -215,24 +217,24 @@
                   <div class="test__question">Куда бы вы хотели выводить очищенную воду?</div>
                   <div class="test__answer">
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input value="Ливневая канализация" type="radio" name="want" class="input-want" checked/>
                       Ливневая канализация
                     </label>
 
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input value="Дренажный колодец" type="radio" name="want" class="input-want" />
                       Дренажный колодец
                     </label>
                     <label class="test__label">
-                      <input type="radio" name="radio" />
+                      <input value="Не знаю, затрудняюсь ответить" type="radio" name="want" class="input-want" />
                       Не знаю, затрудняюсь ответить
                     </label>
                   </div>
                 </div>
                 <div class="test__item">
                   <form class="test__form" action="">
-                    <input type="text" placeholder="Ваше имя" />
-                    <input type="number" placeholder="+375(99) 999-99-99" />
+                    <input id="test__name" type="text" placeholder="Ваше имя" />
+                    <input id="test__number" type="number" placeholder="+375(99) 999-99-99" />
                   </form>
                 </div>
               </div>
@@ -485,7 +487,7 @@
                         type="number"
                         placeholder="+375(99) 999-99-99"
                       />
-                      <button class="top__btn _btn">Отправить</button>
+                      <button class="top__btn _btn input__btn">Отправить</button>
                     </form>
                     <div class="top__confi">
                       Отправляя заявку, вы соглашаетесь с политикой конфиденциальности
@@ -620,7 +622,7 @@
             </div>
           </div>
         </section>
-        <section class="catalog">
+        <section id="catalog" class="catalog">
           <div class="catalog__container">
             <div class="catalog__head">
               <h2 class="catalog__title _title">Каталог септиков в Воронеже</h2>
@@ -747,8 +749,758 @@
             </div>
           </div>
         </section>
+        <section id="additional" class="additional">
+          <div class="additional__container">
+            <div class="additional__title _title">Дополнительные услуги</div>
+            <div class="catalog__body">
+              <div class="catalog__item">
+                <div class="catalog__img ibg">
+                  <img src="img/catalog/1.jpg" alt="" />
+                </div>
+                <div class="catalog__content">
+                  <div class="catalog__name _name">Септик Ж/Б колец на 2 человека</div>
+                  <div class="catalog__price ">11 500 руб.</div>
+                  <button class="catalog__btn _btn _btn_green">Заказать</и>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__img ibg">
+                  <img src="img/catalog/1.jpg" alt="" />
+                </div>
+                <div class="catalog__content">
+                  <div class="catalog__name _name">Септик Ж/Б колец на 2 человека</div>
+                  <div class="catalog__price ">11 500 руб.</div>
+                  <button class="catalog__btn _btn _btn_green">Заказать</и>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__img ibg">
+                  <img src="img/catalog/1.jpg" alt="" />
+                </div>
+                <div class="catalog__content">
+                  <div class="catalog__name _name">Септик Ж/Б колец на 2 человека</div>
+                  <div class="catalog__price ">11 500 руб.</div>
+                  <button class="catalog__btn _btn _btn_green">Заказать</и>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__img ibg">
+                  <img src="img/catalog/1.jpg" alt="" />
+                </div>
+                <div class="catalog__content">
+                  <div class="catalog__name _name">Септик Ж/Б колец на 2 человека</div>
+                  <div class="catalog__price ">11 500 руб.</div>
+                  <button class="catalog__btn _btn _btn_green">Заказать</и>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__img ibg">
+                  <img src="img/catalog/1.jpg" alt="" />
+                </div>
+                <div class="catalog__content">
+                  <div class="catalog__name _name">Септик Ж/Б колец на 2 человека</div>
+                  <div class="catalog__price ">11 500 руб.</div>
+                  <button class="catalog__btn _btn _btn_green">Заказать</и>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__img ibg">
+                  <img src="img/catalog/1.jpg" alt="" />
+                </div>
+                <div class="catalog__content">
+                  <div class="catalog__name _name">Септик Ж/Б колец на 2 человека</div>
+                  <div class="catalog__price ">11 500 руб.</div>
+                  <button class="catalog__btn _btn _btn_green">Заказать</и>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__img ibg">
+                  <img src="img/catalog/1.jpg" alt="" />
+                </div>
+                <div class="catalog__content">
+                  <div class="catalog__name _name">Септик Ж/Б колец на 2 человека</div>
+                  <div class="catalog__price ">11 500 руб.</div>
+                  <button class="catalog__btn _btn _btn_green">Заказать</и>
+                </div>
+              </div>
+              <div class="catalog__item">
+                <div class="catalog__img ibg">
+                  <img src="img/catalog/1.jpg" alt="" />
+                </div>
+                <div class="catalog__content">
+                  <div class="catalog__name _name">Септик Ж/Б колец на 2 человека</div>
+                  <div class="catalog__price ">11 500 руб.</div>
+                  <button class="catalog__btn _btn _btn_green">Заказать</и>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="now">
+          <div class="now__container">
+            <div class="now__title _title">3 причины, установить септик сейчас</div>
+            <div class="reason__body now__body">
+              <div class="reason__item">
+                <div class="reason__head">
+                  <div class="reason__number">1</div>
+                  <div class="reason__icon">
+                    <img src="img/now/1.png" alt="">
+                  </div>
+                </div>
+                <div class="reason__content">
+                  <h4 class="reason__name _name">Быстро установим</h4>
+                  <div class="reason__text _text">
+                    Проведем монтаж в удобное для вас время и оперативно, ведь септики всегда в наличии на складе.
+                  </div>
+                </div>
+              </div>
+              <div class="reason__item">
+                <div class="reason__head">
+                  <div class="reason__number">2</div>
+                  <div class="reason__icon">
+                    <img src="img/now/2.png" alt="">
+                  </div>
+                </div>
+                <div class="reason__content">
+                  <h4 class="reason__name _name">Не повредим ландшафт</h4>
+                  <div class="reason__text _text">
+                    Во время установки ваш ландшафт не будет разрушен. Работаем аккуратно и без явных следов.
+                  </div>
+                </div>
+              </div>
+              <div class="reason__item">
+                <div class="reason__head">
+                  <div class="reason__number">3</div>
+                  <div class="reason__icon">
+                    <img src="img/now/3.png" alt="">
+                  </div>
+                </div>
+                <div class="reason__content">
+                  <h4 class="reason__name _name">Создадим комфорт</h4>
+                  <div class="reason__text _text">
+                    Лето - это время отдыха на даче или в загородном доме. Автономная канализация - залог комфортного отдыха!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="work">
+          <div class="work__container">
+            <div class="work__title _title">Как мы работаем?</div>
+            <div class="work__body">
+              <div class="work__item">
+                <div class="work__number">01</div>
+                <div class="work__img">
+                  
+                  <img src="img/work/1.png" alt="">
+                </div>
+                <div class="work__content">
+                  <div class="work__name _name">Заявка или звонок</div>
+                  <div class="work__text _text">Оставьте заявку или позвоните нам сами. Менеджер согласует дату для проведения замеров</div>
+                </div>
+              </div>
+              <div class="work__item">
+                <div class="work__number">02</div>
+                <div class="work__img">
+                  <img src="img/work/2.png" alt="">
+                </div>
+                <div class="work__content">
+                  <div class="work__name _name">Заявка или звонок</div>
+                  <div class="work__text _text">Оставьте заявку или позвоните нам сами. Менеджер согласует дату для проведения замеров</div>
+                </div>
+              </div>
+              <div class="work__item">
+                <div class="work__number">03</div>
+                <div class="work__img">
+  
+                  <img src="img/work/3.png" alt="">
+                </div>
+                <div class="work__content">
+                  <div class="work__name _name">Заявка или звонок</div>
+                  <div class="work__text _text">Оставьте заявку или позвоните нам сами. Менеджер согласует дату для проведения замеров</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="measuring pattern">
+          <div class="measuring__container pattern__container">
+            <div class="measuring__left pattern__left">
+              <h2 class="measuring__title _title pattern__title">
+                Оставьте свой номер телефона и получите бесплатный замер и расчет стоимости
+              </h2>
+              <p class="measuring__text _text pattern__text">
+                Наш менеджер скоро с вами свяжется и назначит удобное для вас время замера
+              </p>
+              <form action="" class="measuring__form pattern__form">
+                <input
+                  class="measuring__input _input pattern__input"
+                  type="number"
+                  placeholder="+375(99) 999-99-99"
+                />
+                <button class="measuring__btn _btn pattern__btn">Отправить</button>
+              </form>
+              <div class="measuring__confi pattern__confi">
+                Отправляя заявку, вы соглашаетесь с политикой конфиденциальности
+              </div>
+            </div>
+            <div class="measuring__right pattern__right">
+              <div class="measuring__img">
+                <img src="img/measuring/1.png" alt="" />
+                <img src="img/measuring/2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="tools">
+          <div class="tools__container">
+            <h2 class="tools__title _title">Работаем только с лучшей техникой и инструментами</h2>
+            <div class="tools__body">
+              <div class="tools__item">
+                <div class="tools__img">
+                  <img src="img/tools/1.png" alt="">
+                </div>
+                <div class="tools__content">
+                  <div class="tools__name _name">Экскаваторы и погрузчики</div>
+                  <div class="tools__text _text">Позволяют быстро и качественно подготавливать котлованы под большие септики</div>
+                </div>
+              </div>
+              <div class="tools__item">
+                <div class="tools__img">
+                  <img src="img/tools/2.png" alt="">
+                </div>
+                <div class="tools__content">
+                  <div class="tools__name _name">Автономные дизельные генераторы</div>
+                  <div class="tools__text _text">Решают проблему работы инструментов, даже там, где нет электричества.</div>
+                </div>
+              </div>
+              <div class="tools__item">
+                <div class="tools__img">
+                  <img src="img/tools/3.png" alt="">
+                </div>
+                <div class="tools__content">
+                  <div class="tools__name _name">Компактные насосные станции</div>
+                  <div class="tools__text _text">Используем для откачки воды, при высоких грунтовых водах</div>
+                </div>
+              </div>
+              <div class="tools__item">
+                <div class="tools__img">
+                  <img src="img/tools/4.png" alt="">
+                </div>
+                <div class="tools__content">
+                  <div class="tools__name _name">Качественные буровые установки</div>
+                  <div class="tools__text _text">Ускоряют выкапываение траншей и котлованов</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="stages">
+          <div class="stages__container">
+            <h2 class="stages__title _title">Этапы монтажа септика в Воронеже</h2>
+            <div class="stages__body">
+              <div class="stages__item">
+                <div class="stages__image ibg">
+                  <img src="img/stages/1.png" alt="">
+                </div>
+                <div class="stages__content">
+                  <div class="stages__values">
+                    <div class="stages__value _name">1 этап</div>
+                    <div class="stages__arrow">
+                      <img src="img/stages/arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                  <div class="stages__text _text">Подготовка котлована</div>
+                </div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__image ibg">
+                  <img src="img/stages/2.jpg" alt="">
+                </div>
+                <div class="stages__content">
+                  <div class="stages__values">
+                    <div class="stages__value _name">2 этап</div>
+                    <div class="stages__arrow">
+                      <img src="img/stages/arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                  <div class="stages__text _text">Установка септика</div>
+                </div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__image ibg">
+                  <img src="img/stages/3.png" alt="">
+                </div>
+                <div class="stages__content">
+                  <div class="stages__values">
+                    <div class="stages__value _name">3 этап</div>
+                    <div class="stages__arrow">
+                      <img src="img/stages/arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                  <div class="stages__text _text">Монтаж трубопровода</div>
+                </div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__image ibg">
+                  <img src="img/stages/4.jpg" alt="">
+                </div>
+                <div class="stages__content">
+                  <div class="stages__values">
+                    <div class="stages__value _name">4 этап</div>
+                    <div class="stages__arrow">
+                      <img src="img/stages/arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                  <div class="stages__text _text">Заполнение водой, одновременно с засыпкой</div>
+                </div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__image ibg">
+                  <img src="img/stages/5.jpg" alt="">
+                </div>
+                <div class="stages__content">
+                  <div class="stages__values">
+                    <div class="stages__value _name">5 этап</div>
+                    <div class="stages__arrow">
+                      <img src="img/stages/arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                  <div class="stages__text _text">Пусконаладочные работы</div>
+                </div>
+              </div>
+              <div class="stages__item">
+                <div class="stages__image ibg">
+                  <img src="img/stages/6.jpg" alt="">
+                </div>
+                <div class="stages__content">
+                  <div class="stages__values">
+                    <div class="stages__value _name">6 этап</div>
+                    <div class="stages__arrow">
+                      <img src="img/stages/arrow.svg" alt="arrow">
+                    </div>
+                  </div>
+                  <div class="stages__text _text">Финальная засыпка</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="factors">
+          <div class="factors__bg ibg">
+            <img src="img/factors/bg.jpg" alt="">
+          </div>
+          <div class="factors__container">
+            <div class="factors__title _title">Факторы влияющие на стоимость септика и монтажа</div>
+            <div class="factors__row">
+              <div class="factors__body">
+                <div class="factors__img">
+                  <img src="img/factors/img.png" alt="">
+                </div>
+                <div class="factors__item">
+                  <div class="factors__text _text">Глубина подвода коммуникаций</div>
+                  <div class="factors__icon">
+                    <img src="img/factors/1.svg" alt="">
+                  </div>
+                </div>
+                <div class="factors__item">
+                  <div class="factors__text _text">Тип почвы</div>
+                  <div class="factors__icon">
+                    <img src="img/factors/2.svg" alt="">
+                  </div>
+                </div>
+                <div class="factors__item">
+                  <div class="factors__text _text">Глубина подвода коммуникаций</div>
+                  <div class="factors__icon">
+                    <img src="img/factors/3.svg" alt="Уровень грунтовых вод">
+                  </div>
+                </div>
+                <div class="factors__item">
+                  <div class="factors__icon">
+                    <img src="img/factors/4.svg" alt="Уровень грунтовых вод">
+                  </div>
+                  <div class="factors__text _text">Бренд и модель септика</div> 
+                </div>
+                <div class="factors__item">
+                  <div class="factors__icon">
+                    <img src="img/factors/5.svg" alt="Уровень грунтовых вод">
+                  </div>
+                  <div class="factors__text _text">Варианты отвода очищенных вод</div> 
+                </div>
+                <div class="factors__item">
+                  <div class="factors__icon">
+                    <img src="img/factors/6.svg" alt="Уровень грунтовых вод">
+                  </div>
+                  <div class="factors__text _text">Необходимость специальной техники</div> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="montage pattern">
+          <div class="montage__container pattern__container">
+            <div class="montage__left pattern__left">
+              <h2 class="montage__title _title pattern__title">
+                Профессиональный монтаж без скрытых платежей
+              </h2>
+              <p class="montage__text _text pattern__text">
+                Оставьте заявку на установку септика. Наши специалисты скоро с вам свяжутся!
+              </p>
+              <form action="" class="montage__form pattern__form">
+                <input
+                  class="montage__input _input pattern__input"
+                  type="number"
+                  placeholder="+375(99) 999-99-99"
+                />
+                <button class="montage__btn _btn pattern__btn">Отправить</button>
+              </form>
+              <div class="montage__confi pattern__confi">
+                Отправляя заявку, вы соглашаетесь с политикой конфиденциальности
+              </div>
+            </div>
+            <div class="montage__right pattern__right">
+              <div class="montage__img">
+                <img src="img/montage/1.png" alt="" />
+                <img src="img/montage/2.png" alt="" />
+                <img src="img/montage/3.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="can">
+          <div class="can__bg ibg">
+            <img src="img/can/bg.jpg" alt="">
+          </div>
+          <div class="can__container">
+            <h2 class="can__title _title">Можно ли установить септик самостоятельно? <br>
+              Да, но возможны ошибки</h2>
+              <div class="can__body">
+                <div class="can__item">
+                  <div class="can__icon">
+                    <img src="img/difference/12.svg" alt="">
+                  </div>
+                  <div class="can__name _name">Несоблюдение необходимого градуса уклона при прокладке системы трубопроводов.</div>
+                </div>
+                <div class="can__item">
+                  <div class="can__icon">
+                    <img src="img/difference/12.svg" alt="">
+                  </div>
+                  <div class="can__name _name">Неправильное место для монтажа</div>
+                </div>
+                <div class="can__item">
+                  <div class="can__icon">
+                    <img src="img/difference/12.svg" alt="">
+                  </div>
+                  <div class="can__name _name">Траектория прокладки труб предполагает резкие перепады высоты и повороты.</div>
+                </div>
+                <div class="can__item">
+                  <div class="can__icon">
+                    <img src="img/difference/12.svg" alt="">
+                  </div>
+                  <div class="can__name _name">Неверно просчитанная глубина</div>
+                </div>
+                <div class="can__item">
+                  <div class="can__icon">
+                    <img src="img/difference/12.svg" alt="">
+                  </div>
+                  <div class="can__name _name">Неправильно смонтирована и проложена система трубопровода</div>
+                </div>
+                <div class="can__item">
+                  <div class="can__icon">
+                    <img src="img/difference/12.svg" alt="">
+                  </div>
+                  <div class="can__name _name">Неправильный выбор оборудования</div>
+                </div>
+              </div>
+          </div>
+        </section>
+        <section class="wehave">
+          <div class="wehave__container">
+            <h2 class="wehave__title _title">Мы имеем собственный автопарк для доставки септиков и оборудования</h2>
+            <div class="wehave__body">
+              <div class="wehave__item">
+                <div class="wehave__values">
+                  <div class="wehave__value _name">Бесплатно</div>
+                  <div class="wehave__arrow"><img src="img/stages/arrow.svg" alt=""></div>
+                </div>
+                <div class="wehave__text _text">Бесплатная доставка септиков и очистного оборудования для наших клиентов</div>
+              </div>
+              <div class="wehave__item">
+                <div class="wehave__values">
+                  <div class="wehave__value _name">Быстро</div>
+                  <div class="wehave__arrow"><img src="img/stages/arrow.svg" alt=""></div>
+                </div>
+                <div class="wehave__text _text">Большое количество автомобилей позволяет совершать доставку без задержек</div>
+              </div>
+              <div class="wehave__item">
+                <div class="wehave__values">
+                  <div class="wehave__value _name">Безопасно</div>
+                  <div class="wehave__arrow"><img src="img/stages/arrow.svg" alt=""></div>
+                </div>
+                <div class="wehave__text _text">Все автомобили оборудованы под перевозку септиков. Доставим в целости и сохранности!</div>
+              </div>
+            </div>
+            <div class="wehave__footer pattern__container">
+              <div class="wehave__left pattern__left">
+                <h4 class="wehave__name _name pattern__title">
+                  Закажите бесплатную доставку! Привезем и установим септик точно в срок!
+                </h4>
+                <p class="montage__text _text pattern__text">
+                  Оставьте нам свой номер телефона и мы перезвоним в ближайшее время
+                </p>
+                <form action="" class="montage__form pattern__form">
+                  <input
+                    class="montage__input _input pattern__input"
+                    type="number"
+                    placeholder="+375(99) 999-99-99"
+                  />
+                  <button class="montage__btn _btn pattern__btn">Отправить</button>
+                </form>
+                <div class="montage__confi pattern__confi">
+                  Отправляя заявку, вы соглашаетесь с политикой конфиденциальности
+                </div>
+              </div>
+              <div class="wehave__right pattern__right">
+                <div class="wehave__img">
+                  <img src="img/wehave/1.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wehave__bg ibg">
+            <img src="img/wehave/3.png" alt="">
+          </div>
+        </section>
+        <section id="example" class="example">
+          <div class="example__container">
+            <h2 class="example__title _title">Примеры установленных септиков в Воронеже</h2>
+            <div class="example__body">
+              <div class="example__item">
+                <div class="example__img ibg">
+                  <img src="img/example/1.jpg" alt="">
+                </div>
+              </div>
+              <div class="example__item">
+                <div class="example__img ibg">
+                  <img src="img/example/2.jpg" alt="">
+                </div>
+              </div>
+              <div class="example__item">
+                <div class="example__img ibg">
+                  <img src="img/example/3.jpg" alt="">
+                </div>
+              </div>
+              <div class="example__item">
+                <div class="example__img ibg">
+                  <img src="img/example/4.png" alt="">
+                </div>
+              </div>
+              <div class="example__item">
+                <div class="example__img ibg">
+                  <img src="img/example/5.jpg" alt="">
+                </div>
+              </div>
+              <div class="example__item">
+                <div class="example__img ibg">
+                  <img src="img/example/6.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="answers">
+          <div class="answers__container">
+            <h2 class="answers__title _title">Ответы на популярные вопросы</h2>
+            <div class="answers__body">
+              <div class="answers__item">
+                <div class="answers__name _name">Что можно сливать в септик?</div>
+                <div class="answers__text _text">В септики, которые устанавливает наша компания, можно сливать любые хозяйственно-бытовые стоки, в том числе: канализационные стоки, вода из-под ванны, душа, раковины, стиральной машины, посудомоечной машины и бани. Не желательно попадание: горюче-смазочных и лакокрасочных материалов (бензин, керосин, ацетон, краска).</div>
+              </div>
+              <div class="answers__item">
+                <div class="answers__name _name">У нас высокий уровень грунтовых вод, можно ли устанавливать септик?</div>
+                <div class="answers__text _text">Наша компания может предложить несколько вариантов септиков, которые эффективно работают при высоких грунтовых водах. Для экономии на монтажных работах, рекомендуем производить монтаж зимой, когда уровень грунтовых вод максимально низкий.</div>
+              </div>
+              <div class="answers__item">
+                <div class="answers__name _name">Что делать, если отключили электроэнергию во время работы станции?</div>
+                <div class="answers__text _text">При непродолжительном (до 6 часов) отключении электричества не стоит сильно беспокоится. На это время рекомендуется просто сократить объем стоков (не более 200 л.). После возобновления подачи электроэнергии станцией можно пользоваться в обычном режиме.</div>
+              </div>
+              <div class="answers__item">
+                <div class="answers__name _name">Как начать работу с нами?</div>
+                <div class="answers__text _text">Оставьте заявку на сайте или позвоните по указанному телефону на сайте. Первый освободившийся специалист свяжется с Вами в течение короткого промежутка времени.</div>
+              </div>
+              <div class="answers__item">
+                <div class="answers__name _name">Что можно сливать в септик?</div>
+                <div class="answers__text _text">В септики, которые устанавливает наша компания, можно сливать любые хозяйственно-бытовые стоки, в том числе: канализационные стоки, вода из-под ванны, душа, раковины, стиральной машины, посудомоечной машины и бани. Не желательно попадание: горюче-смазочных и лакокрасочных материалов (бензин, керосин, ацетон, краска).</div>
+              </div>
+              <div class="answers__item">
+                <div class="answers__name _name">У нас высокий уровень грунтовых вод, можно ли устанавливать септик?</div>
+                <div class="answers__text _text">Наша компания может предложить несколько вариантов септиков, которые эффективно работают при высоких грунтовых водах. Для экономии на монтажных работах, рекомендуем производить монтаж зимой, когда уровень грунтовых вод максимально низкий.</div>
+              </div>
+              <div class="answers__item">
+                <div class="answers__name _name">Что делать, если отключили электроэнергию во время работы станции?</div>
+                <div class="answers__text _text">При непродолжительном (до 6 часов) отключении электричества не стоит сильно беспокоится. На это время рекомендуется просто сократить объем стоков (не более 200 л.). После возобновления подачи электроэнергии станцией можно пользоваться в обычном режиме.</div>
+              </div>
+              <div class="answers__item">
+                <div class="answers__name _name">Как начать работу с нами?</div>
+                <div class="answers__text _text">Оставьте заявку на сайте или позвоните по указанному телефону на сайте. Первый освободившийся специалист свяжется с Вами в течение короткого промежутка времени.</div>
+              </div>
+             
+            </div>
+          </div>
+        </section>
+        <section class="any pattern">
+          <div class="any__container pattern__container">
+            <div class="any__left pattern__left">
+              <h2 class="any__title _title pattern__title">
+                Проведем монтаж септика любой степени сложности
+              </h2>
+              <p class="any__text _text pattern__text">
+                Профессиональные инженеры с большим опытом работы и необходимым оборудованием проведут монтаж любой сложности
+              </p>
+              <form action="" class="any__form pattern__form">
+                <input
+                  class="any__input _input pattern__input"
+                  type="number"
+                  placeholder="+375(99) 999-99-99"
+                />
+                <button class="any__btn _btn pattern__btn">Отправить</button>
+              </form>
+              <div class="any__confi pattern__confi">
+                Отправляя заявку, вы соглашаетесь с политикой конфиденциальности
+              </div>
+            </div>
+            <div class="any__right pattern__right">
+              <div class="any__sale">
+                <div class="any__sale-row">
+                   <div class="any__sale-name">ТОЛЬКО ДО КОНЦА МЕСЯЦА</div>
+                <div class="any__sale-text">Скидка до 10 000 рублей!на оборудование и монтаж</div>
+                </div>
+               
+              </div>
+              <div class="any__img">
+                <img src="img/any/1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="feedback" class="feedback">
+          <div class="feedback__container">
+            <h2 class="feedback__title _title">Отзывы об установке септика в Воронеже</h2>
+            <div class="feedback__body">
+              <div class="feedback__item">
+                <div class="feedback__img">
+                  <img src="img/feedback/1.jpg" alt="">
+                </div>
+                <div class="feedback__content">
+                  <div class="feedback__name _name">Александр А.</div>
+                  <div class="feedback__text _text">Спасибо за профессиональную работу! Долго выбирал компанию которая сделает монтаж септика и не ошибся. Приехала бригада и через 7 часов уже был проведен трубопровод, установлен дренажный колодец и станция биологической очистки в загородный дом. Еще раз спасибо за работу!</div>
+                </div>
+              </div>
+              <div class="feedback__item">
+                <div class="feedback__img">
+                  <img src="img/feedback/2.jpg" alt="">
+                </div>
+                <div class="feedback__content">
+                  <div class="feedback__name _name">Сергей И.</div>
+                  <div class="feedback__text _text">Заказал бесплатный выезд инженера на сайте компании. Инженер приехал в тот же день. Все понятно объяснил рассказал и подобрали наиболее подходящий вариант канализации. Бригада приехала следующим утром и все работы выполнила в течение дня. Рекомендую!</div>
+                </div>
+              </div>
+              <div class="feedback__item">
+                <div class="feedback__img">
+                  <img src="img/feedback/3.jpg" alt="">
+                </div>
+                <div class="feedback__content">
+                  <div class="feedback__name _name">Владимир И.</div>
+                  <div class="feedback__text _text">В этом году решили с женой перебраться жить за город. Встал вопрос с канализацией. Приехал мастер, проконсультировал по всем вопросам и назначил день проведения работ. Бригада приехала вовремя в 9 утра, а к 6 вечера канализация была установлена! Спасибо за работу!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="install">
+          <div class="install__container">
+            <h2 class="install__title _title">Установка септика в Воронеже</h2>
+            <div class="install__body">
+              <div class="install__content _text">
+                
+              <p>Как только в доме появляется водопровод, и по нему устремляется вода, то сразу зарождается вопрос, куда она должна уходить, то есть остро встаёт проблема автономной канализации в Воронеже. Уже с древних времён люди используют её для утилизации сточных вод, жидкостных загрязнений. Впрочем, изобретение канализации как системы приписывается римлянам. Именно они создали в своё время систему, принцип работы которой за долгие годы существования так и не изменился. В настоящее время в Риме можно посетить такой памятник архитектуры, как античный общественный туалет. Естественно, сегодня он используется не по своему первоначальному назначению, а лишь в качестве достопримечательности. На экскурсии в подобное место Вам расскажут и покажут, каким образом продукты естественных нужд стекали в огромную емкость, которую приходилось периодически вычищать. Это не может не напомнить современные автономные системы канализации в Воронеже. Правда у последних есть одно принципиальное отличие: будучи также как и в древние века огромными емкостями, вкопанными в землю, они представляют собой герметичные конструкции. Получается, что со временем люди научились делать места скопления загрязнений таким образом, чтобы не происходило попадание отходов в почву, исключая таким образом заражение подземных вод и земли вокруг. Тем не менее изобретение септика с последующей его регистрацией в патентном бюро приписывается Джону Моурасу. Основная ёмкость септика конца XIX века была бетонной, а вот трубопровод уже лепили из глины. По нему сточные воды вместе со своим потоком уносили нечистоты в большую емкость, расположенную подальше от жилого помещения, где впоследствии они осаждались, а в определённой мере очищенная вода уходила в почву. Это был, конечно же, прорыв, но, как всегда, вещь, изобретённая одним человеком, в дальнейшем совершенствуется, и септик здесь не исключение. Уже в конце ХХ века в Чехии инженер Ян Топол, разработал систему очистки сточных вод, используя при этом бактерии для септика в Воронеже. Именно такие организмы, как бактерии для септиков в Воронеже и выгребных ям помогают твёрдым веществам разлагаться, превращая их в жидкости и газы. Зародившись в Европе, данное изобретение моментально распространилось по всему миру. На сегодняшний день данная технология используется повсеместно, а Ян Топол продолжает трудиться над разработкой и внедрением новых идей в технологию септика. В нашей стране производство в качестве автономной канализации септиков в Воронеже было запущено в 1999 году.</p>
+              <h4 class="_name">Автономная система канализации в Воронеже сегодня</h4>
+              <p>Вот и в современной действительности всем нам не хочется быть невеждами в отношении соблюдения экологических норм. Любой проживающий на планете человек является частью природы и должен заботиться о сохранности окружающей среды, поэтому для решения этого вопроса следует купить септик с установкой в Воронеже. Тем более актуально это утверждение для жителей дач и загородных домовладений. Также весьма важен для владельцев загородной недвижимости и вопрос эстетический, поэтому в данном случае тоже просто не обойтись без установки септика в частном доме в Воронеже. Ежедневно человек в процессе жизнедеятельности использует воду и пользуется санузлами. Для принятия, отведения и переработки сточных хозфикалиевых вод в городской инфраструктуре предусмотрена канализация и комплексы очистных сооружений. Все мы прекрасно понимаем, что создавать в дачных кооперативах и коттеджных посёлках данную инфраструктуру достаточно дорого, а её эксплуатация влечёт серьёзные финансовые затраты для проживающих. Именно для решения двух проблем: экологической и урбанистической необходимо купить автономный септик для частного дома в Воронеже. Таким образом можно использовать вместо обычной канализации септик в Воронеже. То есть септик можно иначе называть автономной системой канализации в Воронеже. На сегодняшний день это простейшее сооружение для очистки. Попадающие внутрь него стоки канализации, проходят процесс пошаговой очистки. Уже после обработки в нём сточных вод последние делятся на механический осадок и на неочищенную воду. Для очищения последней используется определённая система фильтрации, пройдя которую вода попадает в почву. При этом оставшиеся нечистоты удаляются, то есть происходит откачка септиков в Воронеже ассенизационной машиной.</p>
+              </div>
+              <div class="install__btn _btn"><span>Читать далее</span></div>
+            </div>
+          </div>
+        </section>
+        <section class="stay pattern">
+          <div class="stay__container pattern__container">
+            <div class="stay__left pattern__left">
+              <h2 class="stay__title _title pattern__title">
+                Остались вопросы? <br>
+                Мы ответим!
+              </h2>
+              <p class="stay__text _text pattern__text">
+                Оставьте свой номер телефона и мы проконсультируем вас по всем вопросам
+              </p>
+              <form action="" class="stay__form pattern__form">
+                <input
+                  class="stay__input _input pattern__input"
+                  type="number"
+                  placeholder="+375(99) 999-99-99"
+                />
+                <button class="stay__btn _btn pattern__btn">Отправить</button>
+              </form>
+              <div class="stay__confi pattern__confi">
+                Отправляя заявку, вы соглашаетесь с политикой конфиденциальности
+              </div>
+            </div>
+            <div class="stay__right pattern__right">
+              <div class="stay__img">
+                <img src="img/stay/1.png" alt="" />
+                <img src="img/stay/2.png" alt="" />
+                <img src="img/stay/2.png" alt="" />
+                <img src="img/stay/2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer__container">
+          <a href="index.html" class="footer__logo">
+            <img src="img/footer-logo.svg" alt="logo" />
+          </a>
+          <a href="tel:+375999999999" class="footer__phone">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 75 75"
+              fill="none"
+            >
+              <path
+                d="M15.1055 32.4805C21.1055 44.2695 30.75 53.918 42.5625 59.918L51.7305 50.7305C52.875 49.582 54.5195 49.25 55.957 49.707C60.625 51.25 65.6445 52.082 70.832 52.082C73.1445 52.082 75 53.9375 75 56.25V70.832C75 73.1445 73.1445 75 70.832 75C31.707 75 0 43.293 0 4.16797C0 1.85547 1.875 0 4.16797 0H18.75C21.0625 0 22.918 1.85547 22.918 4.16797C22.918 9.35547 23.75 14.375 25.293 19.043C25.75 20.4805 25.418 22.125 24.2695 23.2695L15.1055 32.4805Z"
+                fill="#25A46D"
+              />
+            </svg>
+            <p>+375(99) 999-99-99</p>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <div class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__body">
+          <div class="popup__title">Оставьте заявку</div>
+          <div class="popup__subtitle">Наш менеджер скоро свяжется с вами!</div>
+          <form action="" class="popup__form">
+            <input type="text" placeholder="Ваше имя">
+            <input type="number" placeholder="+375(99) 999-99-99">
+            <button class="popup__btn _btn">Отправить</button>
+          </form>
+          <div class="popup__condy">Отправляя данные, вы соглашаетесь с Политикой конфиденциальности</div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
