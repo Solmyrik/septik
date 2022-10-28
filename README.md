@@ -9,6 +9,7 @@
 
 ## About the project
 
+![Video-Gif720p](https://github.com/Solmyrik/septik/blob/main/git/%D0%A1%D0%B5%D0%BF%D1%82%D0%B8%D0%BA_-_Google_Chrome_2022-10-28_12-30-26.gif?raw=true)
 
 
 ## Project technologies
